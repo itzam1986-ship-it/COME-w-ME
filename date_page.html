@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Very Important Question 💕</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe0ef 0%, #ffd6e8 60%, #ffc8e0 100%);
+      font-family: 'Georgia', serif;
+      display: flex; align-items: center; justify-content: center;
+      overflow-x: hidden;
+    }
+
+    .fh {
+      position: fixed; pointer-events: none;
+      animation: floatUp linear infinite;
+      opacity: 0; z-index: 0; user-select: none;
+    }
+    @keyframes floatUp {
+      0%   { transform: translateY(110vh) rotate(-8deg); opacity: 0; }
+      8%   { opacity: .65; }
+      92%  { opacity: .4; }
+      100% { transform: translateY(-10vh) rotate(12deg); opacity: 0; }
+    }
+
+    .card {
+      background: rgba(255,255,255,.93);
+      border-radius: 30px; padding: 52px 48px 44px;
+      text-align: center;
+      box-shadow: 0 24px 70px rgba(210,60,120,.18);
+      max-width: 460px; width: 92%;
+      position: relative; z-index: 10;
+      animation: popIn .55s cubic-bezier(.34,1.56,.64,1) both;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(.7); opacity: 0; }
+      to   { transform: scale(1);  opacity: 1; }
+    }
+
+    .big-heart { font-size: 88px; display: block; margin-bottom: 14px; line-height: 1; }
+
+    .btn-yes {
+      background: linear-gradient(135deg,#e83e8c,#be3368);
+      color: #fff; border: none;
+      padding: 16px 42px; font-size: 1.15rem;
+      border-radius: 50px; cursor: pointer;
+    }
+
+    #btn-no {
+      position: absolute;
+      inset: 0;
+      background: #fff;
+      border: 2px solid #f0a0c0;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <span class="big-heart">💖</span>
+  <h1>Wanna go on a date with me? 🌹</h1>
+
+  <div style="position:relative; display:inline-block;">
+    <button class="btn-yes">Yes! 💕</button>
+    <button id="btn-no">No 🙅</button>
+  </div>
+</div>
+
+<script>
+console.log("Loaded date page 💕");
+</script>
+
+</body>
+</html>
